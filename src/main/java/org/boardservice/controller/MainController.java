@@ -11,4 +11,3 @@ public class MainController {
 		return "forward:/articles";
 	}
 }
-
