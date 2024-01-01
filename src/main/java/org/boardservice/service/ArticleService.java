@@ -3,13 +3,12 @@ package org.boardservice.service;
 import lombok.RequiredArgsConstructor;
 import org.boardservice.domain.type.SearchType;
 import org.boardservice.dto.ArticleDto;
-import org.boardservice.dto.ArticleUpdateDto;
+import org.boardservice.dto.ArticleWithCommentsDto;
 import org.boardservice.repository.ArticleRepository;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
 
 @RequiredArgsConstructor
 @Transactional
@@ -19,19 +18,19 @@ public class ArticleService {
 	private final ArticleRepository articleRepository;
 
 	@Transactional(readOnly = true)
-	public Page<ArticleDto> searchArticles(SearchType title, String search_keyword) {
+	public Page<ArticleDto> searchArticles(SearchType searchType, String searchKeyword, Pageable pageable) {
 		return Page.empty();
 	}
 
 	@Transactional(readOnly = true)
-	public ArticleDto searchArticles(long articleId) {
+	public ArticleWithCommentsDto getArticle(Long articleId) {
 		return null;
 	}
 
 	public void saveArticle(ArticleDto Dto) {
 	}
 
-	public void updateArticle(long articleId, ArticleUpdateDto dto) {
+	public void updateArticle(ArticleDto dto) {
 	}
 
 	public void deleteArticle(long articleId) {
