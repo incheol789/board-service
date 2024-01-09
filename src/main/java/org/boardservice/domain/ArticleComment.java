@@ -1,6 +1,6 @@
 package org.boardservice.domain;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 import java.util.Objects;

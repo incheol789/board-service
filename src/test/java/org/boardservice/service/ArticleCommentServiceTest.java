@@ -1,6 +1,6 @@
 package org.boardservice.service;
 
-import jakarta.persistence.EntityNotFoundException;
+import javax.persistence.EntityNotFoundException;
 import org.boardservice.domain.Article;
 import org.boardservice.domain.ArticleComment;
 import org.boardservice.domain.UserAccount;

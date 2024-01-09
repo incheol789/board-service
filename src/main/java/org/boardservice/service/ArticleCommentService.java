@@ -1,6 +1,6 @@
 package org.boardservice.service;
 
-import jakarta.persistence.EntityNotFoundException;
+import javax.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.boardservice.domain.ArticleComment;
@@ -46,8 +46,8 @@ public class ArticleCommentService {
 		}
 	}
 
-	public void deleteArticleComment(Long articleCommentId) {
-		articleCommentRepository.deleteById(articleCommentId);
+	public void deleteArticleComment(Long articleCommentId, String userId) {
+		articleCommentRepository.deleteByIdAndUserAccount_UserId(articleCommentId, userId);
 	}
 
 }
